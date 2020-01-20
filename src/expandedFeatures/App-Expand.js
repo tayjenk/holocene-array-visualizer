@@ -3,24 +3,24 @@
 import React from "react"
 import Button from "react-bootstrap/Button"
 import "./App.css"
-import ArrayCarosel from "./ArrayCarousel"
+import ArrayCarousel from "./ArrayCarousel"
 //import EnterDataForm from "./EnterDataForm"
 
 export default class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      showCarosel: false,
+      showCarousel: false,
       // forms: [],
       // dataset: []
     }
-    this.toggleCarosel = this.toggleCarosel.bind(this)
+    this.toggleCarousel = this.toggleCarousel.bind(this)
     //this.newInput = this.newInput.bind(this)
     //this.addDataForm = this.addDataForm.bind(TouchList)
   }
 
-  toggleCarosel() {
-    this.setState({ showCarosel: !this.state.showCarosel })
+  toggleCarousel() {
+    this.setState({ showCarousel: !this.state.showCarousel })
   }
 
   // newInput(input) {
@@ -45,12 +45,12 @@ export default class App extends React.Component {
           <Button
             variant="outline-secondary"
             type="button"
-            onClick={this.toggleCarosel}
+            onClick={this.toggleCarousel}
           >
             View Data
           </Button>
-          {this.state.showCarosel ? (
-            <ArrayCarosel close={this.toggleCarosel} />
+          {this.state.showCarousel ? (
+            <ArrayCarousel close={this.toggleCarousel} />
           ) : null}
         </header>
       </div>

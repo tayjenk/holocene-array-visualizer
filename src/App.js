@@ -1,19 +1,20 @@
 import React from "react"
 import Button from "react-bootstrap/Button"
 import "./App.css"
-import ArrayCarosel from "./ArrayCarousel"
+import ArrayCarousel from "./ArrayCarousel"
 
 export default class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      showCarosel: false,
+      showCarousel: false,
     }
-    this.toggleCarosel = this.toggleCarosel.bind(this)
+    this.toggleCarousel = this.toggleCarousel.bind(this)
   }
 
-  toggleCarosel() {
-    this.setState({ showCarosel: !this.state.showCarosel })
+  //function will change carousel
+  toggleCarousel() {
+    this.setState({ showCarousel: !this.state.showCarousel })
   }
 
   render() {
@@ -24,12 +25,12 @@ export default class App extends React.Component {
           <Button
             variant="outline-secondary"
             type="button"
-            onClick={this.toggleCarosel}
+            onClick={this.toggleCarousel}
           >
             Click Here
           </Button>
-          {this.state.showCarosel ? (
-            <ArrayCarosel close={this.toggleCarosel} />
+          {this.state.showCarousel ? (
+            <ArrayCarousel close={this.toggleCarousel} />
           ) : null}
         </header>
       </div>
