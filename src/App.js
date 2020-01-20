@@ -2,7 +2,7 @@ import React from "react"
 import Button from "react-bootstrap/Button"
 //import logo from './logo.svg';
 import "./App.css"
-import ArrayCarosel from "./ArrayCarosel"
+import ArrayCarosel from "./ArrayCarousel"
 
 export default class App extends React.Component {
   constructor() {
@@ -14,9 +14,7 @@ export default class App extends React.Component {
   }
 
   toggleCarosel() {
-    console.log(this.state.showCarosel)
     this.setState({ showCarosel: !this.state.showCarosel })
-    console.log(this.state.showCarosel)
   }
 
   render() {
@@ -32,7 +30,7 @@ export default class App extends React.Component {
           >
             Click Here
           </Button>
-        {this.state.showCarosel ? <ArrayCarosel /> : null}
+        {this.state.showCarosel ? <ArrayCarosel close={this.toggleCarosel}/> : null}
         </header>
       </div>
     )

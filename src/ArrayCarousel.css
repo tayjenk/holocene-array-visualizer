@@ -1,0 +1,22 @@
+.carousel {
+  position: fixed;
+  background: white;
+  width: 80%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+
+.close {
+  border-top: 1px solid #ccc;
+  background: #eee;
+  justify-content: center;
+  align-content: center;
+  height: 40px;
+  float: none;
+}
+
+
+
