@@ -3,15 +3,8 @@ import { Line } from "react-chartjs-2"
 import "./css/Data.css"
 
 const ArrayGraph = props => {
-  const xLabels = []
-  const bPoints = []
-  const cPoints = []
 
-  props.data.map(dataObj => {
-    xLabels.push(dataObj.a)
-    bPoints.push(dataObj.b)
-    cPoints.push(dataObj.c)
-  })
+  const {xLabels, bPoints, cPoints } = extractData(props.data)
 
   const state = {
     labels: xLabels,
@@ -35,3 +28,19 @@ const ArrayGraph = props => {
 }
 
 export default ArrayGraph
+
+function extractData(array) {
+  const graphPoints = {
+    xLabels: [],
+    bPoints: [],
+    cPoints: []
+  }
+
+  array.forEach(dataObj => {
+    graphPoints.xLabels.push(dataObj.a)
+    graphPoints.bPoints.push(dataObj.b)
+    graphPoints.cPoints.push(dataObj.c)
+  })
+
+  return graphPoints
+}
