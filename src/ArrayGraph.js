@@ -1,5 +1,6 @@
 import React from "react"
 import { Line } from "react-chartjs-2"
+import "./Data.css"
 
 const ArrayGraph = props => {
   const xLabels = []
@@ -27,7 +28,7 @@ const ArrayGraph = props => {
   }
 
   return (
-    <div>
+    <div className="data-container">
       <Line data={state} />
     </div>
   )

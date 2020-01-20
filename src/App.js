@@ -12,7 +12,6 @@ export default class App extends React.Component {
     this.toggleCarousel = this.toggleCarousel.bind(this)
   }
 
-  //function will change carousel
   toggleCarousel() {
     this.setState({ showCarousel: !this.state.showCarousel })
   }
