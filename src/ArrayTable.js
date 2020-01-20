@@ -1,6 +1,6 @@
 import React from "react"
 import Table from "react-bootstrap/Table"
-import "./Data.css"
+import "./css/Data.css"
 
 const ArrayTable = props => {
   return (

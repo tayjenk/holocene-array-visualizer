@@ -3,7 +3,7 @@ import Carousel from "react-bootstrap/Carousel"
 import Button from "react-bootstrap/Button"
 import ArrayTable from "./ArrayTable"
 import ArrayGraph from "./ArrayGraph"
-import "./ArrayCarousel.css"
+import "./css/ArrayCarousel.css"
 
 //given input
 let inputData = [

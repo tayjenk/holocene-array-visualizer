@@ -1,6 +1,6 @@
 import React from "react"
 import Button from "react-bootstrap/Button"
-import "./App.css"
+import "./css/App.css"
 import ArrayCarousel from "./ArrayCarousel"
 
 export default class App extends React.Component {
