@@ -11,23 +11,25 @@ const inputData = [
   { a: -1, b: -5, c: -4 }
 ]
 
-const ArrayCarousel = (props) => {
+const ArrayCarousel = props => {
   return (
-    <Carousel className="carousel" interval={null}>
+    <Carousel className="carousel" interval={null} indicators={false}>
       <Carousel.Item>
-          <h4>Table View</h4>
-          <ArrayTable data={inputData} />
+        <h4>Table View</h4>
+        <ArrayTable data={inputData} />
         <div className="close">
-          <Button variant="outline-secondary" onClick={props.close}>Close</Button>
+          <Button variant="outline-secondary" onClick={props.close}>
+            Close
+          </Button>
         </div>
       </Carousel.Item>
       <Carousel.Item>
-        <Carousel.Caption>
-          <p>Graph View</p>
-        </Carousel.Caption>
+        <h4>Graph View</h4>
         <ArrayGraph data={inputData} />
         <div className="close">
-          <Button variant="outline-secondary">Close</Button>
+          <Button variant="outline-secondary" onClick={props.close}>
+            Close
+          </Button>
         </div>
       </Carousel.Item>
     </Carousel>
