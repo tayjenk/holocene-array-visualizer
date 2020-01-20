@@ -5,13 +5,14 @@ import ArrayTable from "./ArrayTable"
 import ArrayGraph from "./ArrayGraph"
 import "./ArrayCarousel.css"
 
-const inputData = [
-  { a: -1, b: -5, c: -4 },
+let inputData = [
   { a: 1, b: 3, c: 10 },
-  { a: 3, b: 20, c: 12 }
+  { a: 3, b: 20, c: 12 },
+  { a: -1, b: -5, c: -4 }
 ]
 
 const ArrayCarousel = props => {
+  inputData = inputData.sort((a, b) => a.a - b.a)
   return (
     <Carousel className="carousel" interval={null} indicators={false}>
       <Carousel.Item>
