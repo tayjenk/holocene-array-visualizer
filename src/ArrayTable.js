@@ -1,7 +1,7 @@
 import React from "react"
 import Table from "react-bootstrap/Table"
 
-const ArrayTable = (props) => {
+const ArrayTable = props => {
   return (
     <Table striped>
       <thead>

@@ -6,16 +6,16 @@ import ArrayGraph from "./ArrayGraph"
 import "./ArrayCarousel.css"
 
 const inputData = [
+  { a: -1, b: -5, c: -4 },
   { a: 1, b: 3, c: 10 },
-  { a: 3, b: 20, c: 12 },
-  { a: -1, b: -5, c: -4 }
+  { a: 3, b: 20, c: 12 }
 ]
 
 const ArrayCarousel = props => {
   return (
     <Carousel className="carousel" interval={null} indicators={false}>
       <Carousel.Item>
-        <h4>Table View</h4>
+        <h4>Data Table View</h4>
         <ArrayTable data={inputData} />
         <div className="close">
           <Button variant="outline-secondary" onClick={props.close}>
