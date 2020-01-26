@@ -1,4 +1,4 @@
-//user input fields
+//put input in an object in handleInputChange function and then add to state
 
 import React from "react"
 import Form from "react-bootstrap/Form"
@@ -13,12 +13,22 @@ export default class EnterDataForm extends React.Component {
       b: "",
       c: ""
     }
+    this.allData = []
     this.handleInputChange = this.handleInputChange.bind(this)
+    this.addNewForm = this.addNewForm.bind(this)
   }
 
   handleInputChange(event) {
     this.setState({ [event.target.name]: event.target.value })
-    console.log(this.state)
+    console.log("state", this.state)
+    console.log('data', this.allData)
+  }
+
+  addNewForm() {
+    console.log("alldataBefore", this.allData)
+    this.allData = this.allData.push(this.state)
+    console.log("alldataAfter", this.allData)
+    this.props.addDataForm()
   }
 
   render() {
@@ -56,6 +66,7 @@ export default class EnterDataForm extends React.Component {
             variant="outline-secondary"
             type="button"
             size="sm"
+            onClick={this.addNewForm}
           >
             + Add New Data Set
           </Button>
