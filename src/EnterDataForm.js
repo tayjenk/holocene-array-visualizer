@@ -1,4 +1,6 @@
-//put input in an object in handleInputChange function and then add to state
+//first form after user inputs data, send data to redux store reset input fields
+// app.js will take current state and feed data to table and graph components
+
 
 import React from "react"
 import Form from "react-bootstrap/Form"
